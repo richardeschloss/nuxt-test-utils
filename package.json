@@ -1,0 +1,25 @@
+{
+  "name": "nuxt-test-utils",
+  "version": "0.0.1",
+  "description": "Nuxt test utilities (a single home for all your favorite testing utils)",
+  "main": "index.js",
+  "scripts": {
+    "test": "ava"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/richardeschloss/nuxt-test-utils.git"
+  },
+  "keywords": [
+    "nuxt",
+    "test",
+    "utils",
+    "vue"
+  ],
+  "author": "Richard Schloss",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/richardeschloss/nuxt-test-utils/issues"
+  },
+  "homepage": "https://github.com/richardeschloss/nuxt-test-utils#readme"
+}
