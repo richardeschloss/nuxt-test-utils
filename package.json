@@ -16,6 +16,15 @@
     "utils",
     "vue"
   ],
+  "files": [
+    "dist",
+    "index.js"
+  ],
+  "devDependencies": {
+    "@vue/test-utils": "^1.0.0-beta.27",
+    "browser-env": "^3.2.5",
+    "nuxt": "^2.0.0"
+  },
   "author": "Richard Schloss",
   "license": "MIT",
   "bugs": {
