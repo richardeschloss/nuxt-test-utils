@@ -1,0 +1,25 @@
+exports.getModuleOptions = function(moduleName, optsContainer) {
+  const opts = {}
+  const containers = ['buildModules', 'modules', optsContainer]
+  containers.some((container) => {
+    if (container === optsContainer) {
+      Object.assign(opts, { [optsContainer]: config[container] })
+      return true
+    }
+    const arr = config[container]
+    const mod = arr.find((item) => {
+      if (typeof item === 'string') {
+        return item === moduleName
+      } else if (item.length) {
+        return item[0] === moduleName
+      }
+    })
+    if (mod) {
+      if (mod.length) {
+        Object.assign(opts, mod[1])
+      }
+      return true
+    }
+  })
+  return opts
+}
