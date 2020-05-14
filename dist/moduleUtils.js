@@ -9,7 +9,6 @@ exports.ModuleContext = function({ options, module, compileOpts }) {
       this.compilePlugin(compileOpts)
     }
     this.pluginAdded = opts
-
   }
   this.compilePlugin = compilePlugin
   this.registerModule = () => {
