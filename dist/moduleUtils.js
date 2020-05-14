@@ -1,9 +1,17 @@
-exports.ModuleContext = function({ options, module }) {
+const { compilePlugin } = require('./pluginUtils')
+
+exports.ModuleContext = function({ options, module, compileOpts }) {
   this.options = options
   this.module = module
   this.addPlugin = (opts) => {
+    if (compileOpts) {
+      compileOpts.options = Object.assign({}, opts.options)
+      this.compilePlugin(compileOpts)
+    }
     this.pluginAdded = opts
+
   }
+  this.compilePlugin = compilePlugin
   this.registerModule = () => {
     this.module(this.options)
   }
