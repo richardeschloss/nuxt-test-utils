@@ -1,21 +1,32 @@
-exports.getModuleOptions = function(moduleName, optsContainer) {
+exports.ModuleContext = function({ options, module }) {
+  this.options = options
+  this.module = module
+  this.addPlugin = (opts) => {
+    this.pluginAdded = opts
+  }
+  this.registerModule = () => {
+    this.module(this.options)
+  }
+}
+
+exports.getModuleOptions = function(config, moduleName, optsContainer = moduleName) {
   const opts = {}
   const containers = ['buildModules', 'modules', optsContainer]
   containers.some((container) => {
     if (container === optsContainer) {
-      Object.assign(opts, { [optsContainer]: config[container] })
+      Object.assign(opts, { [optsContainer]: config[optsContainer] })
       return true
     }
     const arr = config[container]
     const mod = arr.find((item) => {
       if (typeof item === 'string') {
         return item === moduleName
-      } else if (item.length) {
+      } else if (Array.isArray(item)) {
         return item[0] === moduleName
       }
     })
     if (mod) {
-      if (mod.length) {
+      if (Array.isArray(mod)) {
         Object.assign(opts, mod[1])
       }
       return true
