@@ -23,7 +23,12 @@
   "devDependencies": {
     "@vue/test-utils": "^1.0.0-beta.27",
     "browser-env": "^3.2.5",
+    "jsdom": "latest",
+    "jsdom-global": "latest",
     "nuxt": "^2.0.0"
+  },
+  "optionalDependencies": {
+    "@nuxtjs/module-test-utils": "latest"
   },
   "author": "Richard Schloss",
   "license": "MIT",

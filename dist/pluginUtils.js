@@ -31,3 +31,12 @@ exports.injectPlugin = function(context = {}, Plugin) {
     })
   })
 }
+
+exports.PluginContext = function(Plugin) {
+  const ctx = this
+  this.injected = {}
+  this.inject = function(label, obj) {
+    ctx.injected[label] = obj
+  }
+  Plugin(this, this.inject)  
+}

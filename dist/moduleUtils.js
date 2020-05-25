@@ -3,6 +3,10 @@ const { compilePlugin } = require('./pluginUtils')
 exports.ModuleContext = function({ options, module, compileOpts }) {
   this.options = options
   this.module = module
+  this.addTemplate = (opts) => {
+    this.templateAdded = opts
+  }
+
   this.addPlugin = (opts) => {
     if (compileOpts) {
       compileOpts.options = Object.assign({}, opts.options)
