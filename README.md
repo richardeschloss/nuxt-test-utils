@@ -12,14 +12,14 @@ Some of these utils may help your tests shave off many minutes of run time!
 
 > npm i -D nuxt-test-utils 
 
-What's in the box:
-* Module Utilities 
+[What's in the box](#utilities):
+* [Module Utilities](#module-utilities) 
   * `getModuleOptions`
   * `ModuleContext`
-* Plugin Utilities
+* [Plugin Utilities](#plugin-utilities) 
   * `compilePlugin` 
   * `PluginContext`
-* Wait Utilities
+* [Wait Utilities](#wait-utilities)
   * `delay`
   * `nextTickP`
   * `watchP`
