@@ -23,15 +23,6 @@ exports.compilePlugin = function({ src, tmpFile, options, overwrite = false }) {
   }
 }
 
-exports.injectPlugin = function(context = {}, Plugin) {
-  return new Promise((resolve) => {
-    Plugin(context, (label, instance) => {
-      context[`$${label}`] = instance
-      resolve(instance)
-    })
-  })
-}
-
 exports.PluginContext = function(Plugin) {
   const ctx = this
   this.injected = {}

@@ -20,15 +20,16 @@
     "dist",
     "index.js"
   ],
-  "devDependencies": {
+  "dependencies": {
+    "lodash.template": "^4.5.0",
+    "serialize-javascript": "^3.0.0"
+  },
+  "optionalDependencies": {
+    "@nuxtjs/module-test-utils": "latest",
     "@vue/test-utils": "^1.0.0-beta.27",
     "browser-env": "^3.2.5",
     "jsdom": "latest",
-    "jsdom-global": "latest",
-    "nuxt": "^2.0.0"
-  },
-  "optionalDependencies": {
-    "@nuxtjs/module-test-utils": "latest"
+    "jsdom-global": "latest"
   },
   "author": "Richard Schloss",
   "license": "MIT",

@@ -1,5 +1,5 @@
 const { getModuleOptions, ModuleContext } = require('./dist/moduleUtils')
-const { compilePlugin, injectPlugin, PluginContext } = require('./dist/pluginUtils')
+const { compilePlugin, PluginContext } = require('./dist/pluginUtils')
 const { delay, nextTickP, watchP } = require('./dist/waitUtils')
 
 module.exports = {
@@ -8,7 +8,6 @@ module.exports = {
   watchP,
   getModuleOptions,
   compilePlugin,
-  injectPlugin,
   ModuleContext,
   PluginContext
 }
