@@ -13,9 +13,17 @@ const nextTickP = (ctx) => {
   })
 }
 
+const watchP = (ctx, prop, changesFn) => {
+  return new Promise((resolve) => {
+    ctx.$watch(prop, resolve)
+    changesFn()
+  })
+}
+
 module.exports = {
   delay,
   nextTickP,
+  watchP,
   getModuleOptions,
   compilePlugin,
   injectPlugin,
