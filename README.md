@@ -34,7 +34,6 @@ This package will come with:
   * [@nuxtjs/module-test-utils](https://www.npmjs.com/package/@nuxtjs/module-test-utils) - Additional testing utilities for *modules*
   * [@vue/test-utils](https://www.npmjs.com/package/@vue/test-utils) - Test utils for Vue components
   * [jsdom-global](https://www.npmjs.com/package/jsdom-global) - Required by @vue/test-utils
-  * [jsdom-global](https://www.npmjs.com/package/jsdom-global) - Required by @vue/test-utils
   * [browser-env](https://www.npmjs.com/package/browser-env) - Usually required when it is desired to have a browser-like environment in Node.js. 
   
 
